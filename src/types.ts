@@ -1,4 +1,4 @@
-import type { Status } from './entity'
+import type { Status } from './entity';
 
 export type Lifecycles = ToArray<Lifecycle>
 
@@ -40,8 +40,8 @@ export type ArrayType<T> = T extends (infer U)[] ? U : T
 
 export type ToArray<T> = T extends Record<any, any>
   ? {
-      [K in keyof T]: T[K][]
-    }
+    [K in keyof T]: T[K][]
+  }
   : unknown
 
 export type ProxyType = Omit<ProxyConstructor, keyof ProxyConstructor>
